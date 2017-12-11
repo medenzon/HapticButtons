@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD4DA6881FDB384500ADC8B9 /* 3D Buttons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3D Buttons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD4DA6881FDB384500ADC8B9 /* HapticButtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticButtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4DA68B1FDB384500ADC8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD4DA68D1FDB384500ADC8B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD4DA6901FDB384500ADC8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		AD4DA6891FDB384500ADC8B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD4DA6881FDB384500ADC8B9 /* 3D Buttons.app */,
+				AD4DA6881FDB384500ADC8B9 /* HapticButtons.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +93,7 @@
 			);
 			name = HapticButtons;
 			productName = HapticButtons;
-			productReference = AD4DA6881FDB384500ADC8B9 /* 3D Buttons.app */;
+			productReference = AD4DA6881FDB384500ADC8B9 /* HapticButtons.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -296,7 +296,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michaeledenzon.HapticButtons;
-				PRODUCT_NAME = "3D Buttons";
+				PRODUCT_NAME = HapticButtons;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -312,7 +312,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michaeledenzon.HapticButtons;
-				PRODUCT_NAME = "3D Buttons";
+				PRODUCT_NAME = HapticButtons;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
