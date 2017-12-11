@@ -12,16 +12,24 @@
 		AD4DA6911FDB384500ADC8B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4DA68F1FDB384500ADC8B9 /* Main.storyboard */; };
 		AD4DA6931FDB384500ADC8B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD4DA6921FDB384500ADC8B9 /* Assets.xcassets */; };
 		AD4DA6961FDB384500ADC8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4DA6941FDB384500ADC8B9 /* LaunchScreen.storyboard */; };
+		AD4DA69E1FDB38A600ADC8B9 /* HapticButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DA69D1FDB38A600ADC8B9 /* HapticButton.swift */; };
+		AD4DA6A21FDB607700ADC8B9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DA6A11FDB607700ADC8B9 /* Colors.swift */; };
+		ADB5F9281FDE22ED00BC3F90 /* InteractiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5F9271FDE22ED00BC3F90 /* InteractiveView.swift */; };
+		ADB5F92A1FDE24B700BC3F90 /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5F9291FDE24B700BC3F90 /* LightView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD4DA6881FDB384500ADC8B9 /* HapticButtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticButtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD4DA6881FDB384500ADC8B9 /* 3D Buttons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3D Buttons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4DA68B1FDB384500ADC8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD4DA68D1FDB384500ADC8B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD4DA6901FDB384500ADC8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD4DA6921FDB384500ADC8B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD4DA6951FDB384500ADC8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD4DA6971FDB384500ADC8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD4DA69D1FDB38A600ADC8B9 /* HapticButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticButton.swift; sourceTree = "<group>"; };
+		AD4DA6A11FDB607700ADC8B9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		ADB5F9271FDE22ED00BC3F90 /* InteractiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveView.swift; sourceTree = "<group>"; };
+		ADB5F9291FDE24B700BC3F90 /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +54,7 @@
 		AD4DA6891FDB384500ADC8B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD4DA6881FDB384500ADC8B9 /* HapticButtons.app */,
+				AD4DA6881FDB384500ADC8B9 /* 3D Buttons.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +64,10 @@
 			children = (
 				AD4DA68B1FDB384500ADC8B9 /* AppDelegate.swift */,
 				AD4DA68D1FDB384500ADC8B9 /* ViewController.swift */,
+				ADB5F9271FDE22ED00BC3F90 /* InteractiveView.swift */,
+				AD4DA69D1FDB38A600ADC8B9 /* HapticButton.swift */,
+				ADB5F9291FDE24B700BC3F90 /* LightView.swift */,
+				AD4DA6A11FDB607700ADC8B9 /* Colors.swift */,
 				AD4DA68F1FDB384500ADC8B9 /* Main.storyboard */,
 				AD4DA6921FDB384500ADC8B9 /* Assets.xcassets */,
 				AD4DA6941FDB384500ADC8B9 /* LaunchScreen.storyboard */,
@@ -81,7 +93,7 @@
 			);
 			name = HapticButtons;
 			productName = HapticButtons;
-			productReference = AD4DA6881FDB384500ADC8B9 /* HapticButtons.app */;
+			productReference = AD4DA6881FDB384500ADC8B9 /* 3D Buttons.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,6 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4DA69E1FDB38A600ADC8B9 /* HapticButton.swift in Sources */,
+				ADB5F92A1FDE24B700BC3F90 /* LightView.swift in Sources */,
+				ADB5F9281FDE22ED00BC3F90 /* InteractiveView.swift in Sources */,
+				AD4DA6A21FDB607700ADC8B9 /* Colors.swift in Sources */,
 				AD4DA68E1FDB384500ADC8B9 /* ViewController.swift in Sources */,
 				AD4DA68C1FDB384500ADC8B9 /* AppDelegate.swift in Sources */,
 			);
@@ -275,12 +291,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HPXGDUGWR;
 				INFOPLIST_FILE = HapticButtons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michaeledenzon.HapticButtons;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "3D Buttons";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,12 +307,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HPXGDUGWR;
 				INFOPLIST_FILE = HapticButtons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michaeledenzon.HapticButtons;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "3D Buttons";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -9,17 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.addSubview(InteractiveView(frame: view.frame))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
+    override var shouldAutorotate: Bool {
+        
+        return false
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        
+        return true
+    }
 }
 
