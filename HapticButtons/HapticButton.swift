@@ -46,7 +46,7 @@ class HapticButton: UIView {
         }
     }
     
-   private override init(frame: CGRect) {
+    private override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.cornerRadius = self.frame.height / 4
     }
@@ -128,7 +128,7 @@ class HapticButton: UIView {
     private func reset() {
         insetView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
     }
-
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         lightGenerator = UIImpactFeedbackGenerator(style: .medium)
@@ -176,3 +176,4 @@ class HapticButton: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
