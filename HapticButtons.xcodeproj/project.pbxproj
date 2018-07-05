@@ -13,7 +13,6 @@
 		AD4DA6931FDB384500ADC8B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD4DA6921FDB384500ADC8B9 /* Assets.xcassets */; };
 		AD4DA6961FDB384500ADC8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4DA6941FDB384500ADC8B9 /* LaunchScreen.storyboard */; };
 		AD4DA69E1FDB38A600ADC8B9 /* AnalogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DA69D1FDB38A600ADC8B9 /* AnalogButton.swift */; };
-		AD4DA6A21FDB607700ADC8B9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DA6A11FDB607700ADC8B9 /* Colors.swift */; };
 		ADB5F9281FDE22ED00BC3F90 /* InteractiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5F9271FDE22ED00BC3F90 /* InteractiveView.swift */; };
 		ADB5F92A1FDE24B700BC3F90 /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5F9291FDE24B700BC3F90 /* LightView.swift */; };
 		ADFE83A61FDF14EE007089F7 /* AbstractButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE83A51FDF14EE007089F7 /* AbstractButton.swift */; };
@@ -29,7 +28,6 @@
 		AD4DA6951FDB384500ADC8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD4DA6971FDB384500ADC8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD4DA69D1FDB38A600ADC8B9 /* AnalogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogButton.swift; sourceTree = "<group>"; };
-		AD4DA6A11FDB607700ADC8B9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		ADB5F9271FDE22ED00BC3F90 /* InteractiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveView.swift; sourceTree = "<group>"; };
 		ADB5F9291FDE24B700BC3F90 /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 		ADFE83A51FDF14EE007089F7 /* AbstractButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractButton.swift; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				ADB5F9271FDE22ED00BC3F90 /* InteractiveView.swift */,
 				ADC118B31FDF1F5F004883D4 /* Superclass */,
 				ADB5F9291FDE24B700BC3F90 /* LightView.swift */,
-				AD4DA6A11FDB607700ADC8B9 /* Colors.swift */,
 				AD4DA68F1FDB384500ADC8B9 /* Main.storyboard */,
 				AD4DA6921FDB384500ADC8B9 /* Assets.xcassets */,
 				AD4DA6941FDB384500ADC8B9 /* LaunchScreen.storyboard */,
@@ -166,7 +163,6 @@
 				ADB5F92A1FDE24B700BC3F90 /* LightView.swift in Sources */,
 				ADFE83A81FDF17A3007089F7 /* HapticButton.swift in Sources */,
 				ADB5F9281FDE22ED00BC3F90 /* InteractiveView.swift in Sources */,
-				AD4DA6A21FDB607700ADC8B9 /* Colors.swift in Sources */,
 				AD4DA68E1FDB384500ADC8B9 /* ViewController.swift in Sources */,
 				AD4DA68C1FDB384500ADC8B9 /* AppDelegate.swift in Sources */,
 				ADFE83A61FDF14EE007089F7 /* AbstractButton.swift in Sources */,
