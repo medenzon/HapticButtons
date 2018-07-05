@@ -12,7 +12,7 @@ import UIKit
 class InteractiveView: UIView {
     
     var light: LightView!
-    var button: HapticButton!
+    var button: AnalogButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,7 +20,7 @@ class InteractiveView: UIView {
         let point1 = CGPoint(x: center.x, y: frame.height * (1/3))
         let point2 = CGPoint(x: center.x, y: frame.height * (2/3))
         light = LightView(center: point1, width: 100, height: 100)
-        button = HapticButton(in: self, center: point2, radius: 75)
+        button = AnalogButton(in: self, center: point2, radius: 75)
         addSubview(light)
         addSubview(button)
     }

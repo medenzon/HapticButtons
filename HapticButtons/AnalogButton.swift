@@ -1,5 +1,5 @@
 //
-//  InteractiveView.swift
+//  AnalogButton.swift
 //  HapticButtons
 //
 //  Created by Michael Edenzon on 12/8/17.
@@ -9,28 +9,17 @@
 import Foundation
 import UIKit
 
-enum Direction {
-    case up, down
-}
-
-class HapticButton: UIView {
+class AnalogButton: UIView {
     
     var master: InteractiveView!
     private var lightGenerator: UIImpactFeedbackGenerator?
     private var heavyGenerator: UIImpactFeedbackGenerator?
     private var clicked = false
-    private var color: UIColor!
-    private var insetView: UIView!
-    private var filterView: UIView!
     private var imageView: UIImageView!
+    
     private var maxForce: CGFloat {
         get {
             return 2.0
-        }
-    }
-    private var maxScale: CGFloat {
-        get {
-            return normalized(force: 5.5, maximum: true)
         }
     }
     
@@ -58,29 +47,7 @@ class HapticButton: UIView {
         self.layer.cornerRadius = self.frame.height / 2
         self.backgroundColor = Color.clear
         self.master = master
-        addSubviews()
-    }
-    
-    private func addSubviews() {
-        addInsetView()
-        addFilterView()
         addImageView()
-    }
-    
-    private func addInsetView() {
-        insetView = UIView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
-        insetView.backgroundColor = Color.clear
-        insetView.layer.borderColor = Color.clear.cgColor
-        insetView.layer.borderWidth = 1.0
-        insetView.layer.cornerRadius = layer.cornerRadius
-        addSubview(insetView)
-    }
-    
-    private func addFilterView() {
-        filterView = UIView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
-        filterView.backgroundColor = Color.clear
-        filterView.layer.cornerRadius = layer.cornerRadius
-        addSubview(filterView)
     }
     
     private func addImageView() {
@@ -94,62 +61,39 @@ class HapticButton: UIView {
         switch direction {
         case .up:
             lightGenerator?.impactOccurred()
-            filterView.backgroundColor = Color.clear
             imageView.image = imageUp
             master.activate()
             clicked = false
         case .down:
             heavyGenerator?.impactOccurred()
-            filterView.backgroundColor = Color.clear.withAlphaComponent(0.25)
             imageView.image = imageDown
-            setScale(to: maxScale)
             clicked = true
         }
     }
     
-    private func normalized(force: CGFloat, maximum: Bool = false) -> CGFloat {
-        var n: CGFloat = 0.0
-        if maximum {
-            n = pow(log(pow(force,2)),0.15)
-        } else {
-            n = pow(log(pow(min(force, maxForce),2)),0.125)
-        }
-        return n
-    }
-    
-    private func setScale(to x: CGFloat) {
-        insetView.transform = CGAffineTransform(scaleX: x, y: x)
-    }
-    
-    private func scale(to touch: UITouch) {
-        setScale(to: normalized(force: touch.force))
-    }
-    
-    private func reset() {
-        insetView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-    }
-    
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    func prepareGenerators() {
         lightGenerator = UIImpactFeedbackGenerator(style: .medium)
         heavyGenerator = UIImpactFeedbackGenerator(style: .heavy)
         lightGenerator?.prepare()
         heavyGenerator?.prepare()
     }
     
+    func disposeGenerators() {
+        lightGenerator = nil
+        heavyGenerator = nil
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        prepareGenerators()
+    }
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            
-            if touch.force > 1.0 && !clicked {
-                scale(to: touch)
-                if touch.force >= maxForce && !clicked {
-                    press(button: .down)
-                }
+            if touch.force >= maxForce && !clicked {
+                press(button: .down)
             }
-            
             if touch.force < maxForce && clicked {
                 press(button: .up)
-                reset()
             }
         }
     }
@@ -157,19 +101,15 @@ class HapticButton: UIView {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         if clicked {
             press(button: .up)
-            reset()
         }
-        lightGenerator = nil
-        heavyGenerator = nil
+        disposeGenerators()
     }
     
-    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if clicked {
             press(button: .up)
-            reset()
         }
-        lightGenerator = nil
-        heavyGenerator = nil
+        disposeGenerators()
     }
     
     required init?(coder aDecoder: NSCoder) {
